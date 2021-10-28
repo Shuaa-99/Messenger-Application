@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		C31754282729649200A3BCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31754272729649200A3BCCC /* AppDelegate.swift */; };
 		C317542A2729649200A3BCCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31754292729649200A3BCCC /* SceneDelegate.swift */; };
-		C317542C2729649200A3BCCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317542B2729649200A3BCCC /* LoginViewController.swift */; };
+		C317542C2729649200A3BCCC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317542B2729649200A3BCCC /* LogInViewController.swift */; };
 		C317542F2729649200A3BCCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317542D2729649200A3BCCC /* Main.storyboard */; };
 		C31754312729649300A3BCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C31754302729649300A3BCCC /* Assets.xcassets */; };
 		C31754342729649300A3BCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C31754322729649300A3BCCC /* LaunchScreen.storyboard */; };
+		C31754402729765500A3BCCC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317543F2729765500A3BCCC /* Extensions.swift */; };
+		C31754432729773500A3BCCC /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31754422729773500A3BCCC /* ConversationViewController.swift */; };
+		C31754462729779000A3BCCC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31754452729779000A3BCCC /* RegisterViewController.swift */; };
+		C3175448272977BD00A3BCCC /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3175447272977BD00A3BCCC /* NewConversationViewController.swift */; };
+		C317544A272977D800A3BCCC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3175449272977D800A3BCCC /* ProfileViewController.swift */; };
+		C33C6DC82729E4C500867A44 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C33C6DC72729E4C500867A44 /* FirebaseAuth */; };
+		C33C6DCA2729E4C500867A44 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C33C6DC92729E4C500867A44 /* FirebaseDatabase */; };
+		C33C6DCC2729E4C500867A44 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C33C6DCB2729E4C500867A44 /* FirebaseFirestore */; };
+		C33C6DCE2729E4C500867A44 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C33C6DCD2729E4C500867A44 /* FirebaseStorage */; };
+		FA02E432B322DA3727E2262A /* Pods_Messenger_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3AFF1D6E2324744E894DC3 /* Pods_Messenger_Application.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02FB99CA0A48E838E2747395 /* Pods-Messenger Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger Application.debug.xcconfig"; path = "Target Support Files/Pods-Messenger Application/Pods-Messenger Application.debug.xcconfig"; sourceTree = "<group>"; };
+		1D5487EE84FC04092C683437 /* Pods-Messenger Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger Application.release.xcconfig"; path = "Target Support Files/Pods-Messenger Application/Pods-Messenger Application.release.xcconfig"; sourceTree = "<group>"; };
+		3F3AFF1D6E2324744E894DC3 /* Pods_Messenger_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31754242729649200A3BCCC /* Messenger Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Messenger Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31754272729649200A3BCCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C31754292729649200A3BCCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C317542B2729649200A3BCCC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C317542B2729649200A3BCCC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C317542E2729649200A3BCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C31754302729649300A3BCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C31754332729649300A3BCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C31754352729649300A3BCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C317543F2729765500A3BCCC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C31754422729773500A3BCCC /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		C31754452729779000A3BCCC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C3175447272977BD00A3BCCC /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
+		C3175449272977D800A3BCCC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33C6DCA2729E4C500867A44 /* FirebaseDatabase in Frameworks */,
+				C33C6DCE2729E4C500867A44 /* FirebaseStorage in Frameworks */,
+				C33C6DC82729E4C500867A44 /* FirebaseAuth in Frameworks */,
+				C33C6DCC2729E4C500867A44 /* FirebaseFirestore in Frameworks */,
+				FA02E432B322DA3727E2262A /* Pods_Messenger_Application.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C09959EF6A5A687C7981EBBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F3AFF1D6E2324744E894DC3 /* Pods_Messenger_Application.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C317541B2729649200A3BCCC = {
 			isa = PBXGroup;
 			children = (
 				C31754262729649200A3BCCC /* Messenger Application */,
 				C31754252729649200A3BCCC /* Products */,
+				E4A8DEC581CACFD029B4D1D2 /* Pods */,
+				C09959EF6A5A687C7981EBBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +93,6 @@
 				C317543D27296A9600A3BCCC /* Models */,
 				C317543C27296A8200A3BCCC /* Views */,
 				C317543B27296A6800A3BCCC /* Controllers */,
-				C31754302729649300A3BCCC /* Assets.xcassets */,
 				C31754352729649300A3BCCC /* Info.plist */,
 			);
 			path = "Messenger Application";
@@ -69,7 +101,10 @@
 		C317543B27296A6800A3BCCC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C317542B2729649200A3BCCC /* LoginViewController.swift */,
+				C3175449272977D800A3BCCC /* ProfileViewController.swift */,
+				C3175447272977BD00A3BCCC /* NewConversationViewController.swift */,
+				C31754422729773500A3BCCC /* ConversationViewController.swift */,
+				C31754442729774C00A3BCCC /* LogReg */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -77,8 +112,8 @@
 		C317543C27296A8200A3BCCC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C31754322729649300A3BCCC /* LaunchScreen.storyboard */,
-				C317542D2729649200A3BCCC /* Main.storyboard */,
+				C31754412729767E00A3BCCC /* Storyboards */,
+				C31754302729649300A3BCCC /* Assets.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -93,10 +128,39 @@
 		C317543E27296AA800A3BCCC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C31754292729649200A3BCCC /* SceneDelegate.swift */,
 				C31754272729649200A3BCCC /* AppDelegate.swift */,
+				C31754292729649200A3BCCC /* SceneDelegate.swift */,
+				C317543F2729765500A3BCCC /* Extensions.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C31754412729767E00A3BCCC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C317542D2729649200A3BCCC /* Main.storyboard */,
+				C31754322729649300A3BCCC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C31754442729774C00A3BCCC /* LogReg */ = {
+			isa = PBXGroup;
+			children = (
+				C317542B2729649200A3BCCC /* LogInViewController.swift */,
+				C31754452729779000A3BCCC /* RegisterViewController.swift */,
+			);
+			path = LogReg;
+			sourceTree = "<group>";
+		};
+		E4A8DEC581CACFD029B4D1D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02FB99CA0A48E838E2747395 /* Pods-Messenger Application.debug.xcconfig */,
+				1D5487EE84FC04092C683437 /* Pods-Messenger Application.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,15 +170,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C31754382729649300A3BCCC /* Build configuration list for PBXNativeTarget "Messenger Application" */;
 			buildPhases = (
+				A87B2461DE70F8632D5AD933 /* [CP] Check Pods Manifest.lock */,
 				C31754202729649200A3BCCC /* Sources */,
 				C31754212729649200A3BCCC /* Frameworks */,
 				C31754222729649200A3BCCC /* Resources */,
+				CA8F1C575C71F2D452B226A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Messenger Application";
+			packageProductDependencies = (
+				C33C6DC72729E4C500867A44 /* FirebaseAuth */,
+				C33C6DC92729E4C500867A44 /* FirebaseDatabase */,
+				C33C6DCB2729E4C500867A44 /* FirebaseFirestore */,
+				C33C6DCD2729E4C500867A44 /* FirebaseStorage */,
+			);
 			productName = "Messenger Application";
 			productReference = C31754242729649200A3BCCC /* Messenger Application.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +215,9 @@
 				Base,
 			);
 			mainGroup = C317541B2729649200A3BCCC;
+			packageReferences = (
+				C33C6DC62729E4C500867A44 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */,
+			);
 			productRefGroup = C31754252729649200A3BCCC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -165,14 +240,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A87B2461DE70F8632D5AD933 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Messenger Application-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA8F1C575C71F2D452B226A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Messenger Application/Pods-Messenger Application-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Messenger Application/Pods-Messenger Application-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Messenger Application/Pods-Messenger Application-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C31754202729649200A3BCCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C317542C2729649200A3BCCC /* LoginViewController.swift in Sources */,
+				C317542C2729649200A3BCCC /* LogInViewController.swift in Sources */,
+				C3175448272977BD00A3BCCC /* NewConversationViewController.swift in Sources */,
 				C31754282729649200A3BCCC /* AppDelegate.swift in Sources */,
+				C31754432729773500A3BCCC /* ConversationViewController.swift in Sources */,
+				C31754462729779000A3BCCC /* RegisterViewController.swift in Sources */,
 				C317542A2729649200A3BCCC /* SceneDelegate.swift in Sources */,
+				C317544A272977D800A3BCCC /* ProfileViewController.swift in Sources */,
+				C31754402729765500A3BCCC /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +438,7 @@
 		};
 		C31754392729649300A3BCCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02FB99CA0A48E838E2747395 /* Pods-Messenger Application.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -343,6 +466,7 @@
 		};
 		C317543A2729649300A3BCCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D5487EE84FC04092C683437 /* Pods-Messenger Application.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -390,6 +514,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C33C6DC62729E4C500867A44 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C33C6DC72729E4C500867A44 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C33C6DC62729E4C500867A44 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			productName = FirebaseAuth;
+		};
+		C33C6DC92729E4C500867A44 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C33C6DC62729E4C500867A44 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			productName = FirebaseDatabase;
+		};
+		C33C6DCB2729E4C500867A44 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C33C6DC62729E4C500867A44 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			productName = FirebaseFirestore;
+		};
+		C33C6DCD2729E4C500867A44 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C33C6DC62729E4C500867A44 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C317541C2729649200A3BCCC /* Project object */;
 }
