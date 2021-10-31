@@ -55,6 +55,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log in">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logInButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7RX-bC-zTJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vko-DY-QrF">
                                 <rect key="frame" x="66" y="611" width="270" height="31"/>
@@ -134,8 +137,8 @@
                     <navigationItem key="navigationItem" id="fsJ-BY-N4f"/>
                     <connections>
                         <outlet property="emailTxtField" destination="go6-DB-IfR" id="Yad-yG-PVd"/>
-                        <outlet property="faceook" destination="Vko-DY-QrF" id="BMk-ws-c92"/>
                         <outlet property="logInButton" destination="TYj-pU-d2j" id="sG4-yc-f45"/>
+                        <outlet property="logWithFacebookButton" destination="Vko-DY-QrF" id="BMk-ws-c92"/>
                         <outlet property="passTxtField" destination="IE4-9I-Qlk" id="Az8-Ps-LRh"/>
                     </connections>
                 </viewController>
@@ -173,6 +176,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Register">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButtonPress:" destination="gWc-v6-pkh" eventType="touchUpInside" id="ny0-Z0-C7J"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fNT-zb-sJv" customClass="MDCOutlinedTextField">
                                 <rect key="frame" x="20" y="291.66666666666669" width="350" height="26.666666666666686"/>

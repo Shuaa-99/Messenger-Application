@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 import MaterialComponents.MaterialTextFields
 import MaterialComponents.MaterialTextControls_FilledTextAreas
 import MaterialComponents.MaterialTextControls_FilledTextFields
@@ -51,4 +53,18 @@ class RegisterViewController: UIViewController , UIImagePickerControllerDelegate
         }
     }
     
+    @IBAction func registerButtonPress(_ sender: Any) {
+        firebaseAuth()
+    }
+    func firebaseAuth(){
+        // Firebase Login / check to see if email is taken
+        // try to create an account
+        FirebaseAuth.Auth.auth().createUser(withEmail: emailTxtField.text!, password: passTxtField.text!, completion: { authResult , error  in
+        guard let result = authResult, error == nil else {
+            print("Error creating user")
+            return
+        }
+        let user = result.user
+        print("Created User: \(user)")
+    })}
 }
