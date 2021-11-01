@@ -48,6 +48,8 @@ class RegisterViewController: UIViewController , UIImagePickerControllerDelegate
             dismiss(animated: true)
            profilImage.layer.masksToBounds = true
                   profilImage.layer.cornerRadius = 45
+    profilImage.layer.cornerRadius = profilImage.frame.size.height/2
+
         }else{
             print("image not found")
         }

@@ -38,15 +38,28 @@ class LogInViewController: UIViewController {
     }
     func firebaseAuth() {
         // Firebase Login
-        FirebaseAuth.Auth.auth().signIn(withEmail: emailTxtField.text!, password: passTxtField.text!, completion: { authResult, error in
+        FirebaseAuth.Auth.auth().signIn(withEmail: emailTxtField.text!, password: passTxtField.text!, completion: { [weak self] authResult, error in
+            guard let strongSelf = self else {
+                return
+            }
             guard let result = authResult, error == nil else {
-                print("Failed to log in user with email \(self.emailTxtField.text ?? "")")
+                print("Failed to log in user with email \(self!.emailTxtField.text ?? "")")
                 return
             }
             let user = result.user
             print("logged in user: \(user)")
+            // if this succeeds, dismiss
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+           let conVC =  ConversationViewController()
+            self?.navigationController?.pushViewController(conVC, animated: true)
         })
 
     }
 }
 
+
+ 
+ 
+    
+     
+   
