@@ -12,7 +12,7 @@ class IndixTabBarC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       selectedIndex = 1 //go to profile aftr log in
     }
     
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gqC-e9-mbH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1u7-j6-v34">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vh-ue-Us2">
-                                <rect key="frame" x="87" y="310" width="216" height="36"/>
+                                <rect key="frame" x="87" y="266" width="216" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="bgU-1F-WBp"/>
                                 </constraints>
@@ -72,6 +72,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="Facebook-f_Logo" title="     Continue with Facebook">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginWithFaceBookPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jkr-vN-nb6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipR-T1-Ir7">
                                 <rect key="frame" x="59" y="661" width="179" height="21"/>
@@ -86,17 +89,11 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="gWc-v6-pkh" kind="show" id="Rgd-sT-OO9"/>
+                                    <action selector="gotoRegesterPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ByH-pp-g91"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jC-E3-cul">
-                                <rect key="frame" x="75" y="57" width="240" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.89000000000000001" green="0.43074603849999998" blue="0.63408112169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <imageReference key="image" image="message" catalog="system" symbolScale="large"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFf-h2-Amt">
-                                <rect key="frame" x="87" y="226" width="216" height="76"/>
+                                <rect key="frame" x="87" y="182" width="216" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="216" id="Qte-RH-1cX"/>
                                     <constraint firstAttribute="height" constant="76" id="Ys0-9T-hnA"/>
@@ -105,6 +102,12 @@
                                 <color key="textColor" red="0.68556701030927836" green="0.12718568248011564" blue="0.38942565851266059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jC-E3-cul">
+                                <rect key="frame" x="66" y="42" width="240" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.89000000000000001" green="0.43074603849999998" blue="0.63408112169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <imageReference key="image" image="message" catalog="system" symbolScale="large"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.98437098163419756" green="0.91891595743157994" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -136,7 +139,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fsJ-BY-N4f"/>
                     <connections>
-                        <outlet property="emailTxtField" destination="go6-DB-IfR" id="Yad-yG-PVd"/>
+                        <outlet property="emailTxtField" destination="go6-DB-IfR" id="BOq-Om-iwn"/>
                         <outlet property="logInButton" destination="TYj-pU-d2j" id="sG4-yc-f45"/>
                         <outlet property="logWithFacebookButton" destination="Vko-DY-QrF" id="BMk-ws-c92"/>
                         <outlet property="passTxtField" destination="IE4-9I-Qlk" id="Az8-Ps-LRh"/>
@@ -149,7 +152,7 @@
         <!--Register View Controller-->
         <scene sceneID="apN-25-WVH">
             <objects>
-                <viewController id="gWc-v6-pkh" customClass="RegisterViewController" customModule="Messenger_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="gWc-v6-pkh" customClass="RegisterViewController" customModule="Messenger_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOP-WQ-Vne">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,12 +190,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="honorifix-prefix"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOU-1V-4gY">
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOU-1V-4gY">
                                 <rect key="frame" x="104" y="94" width="182" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.89000000000000001" green="0.43074603849999998" blue="0.63408112169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="person.circle" catalog="system"/>
+                                <state key="normal" backgroundImage="person.crop.circle.badge.plus" catalog="system"/>
                                 <connections>
                                     <action selector="takeImageButton:" destination="gWc-v6-pkh" eventType="touchUpInside" id="P66-81-gKE"/>
                                 </connections>
@@ -211,6 +214,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title=" SIGN IN">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToLogInPress:" destination="gWc-v6-pkh" eventType="touchUpInside" id="Iqc-yD-Uc1"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUe-pR-IyJ" customClass="MDCOutlinedTextField">
                                 <rect key="frame" x="20" y="469" width="350" height="25"/>
@@ -235,60 +241,174 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zH1-nf-LvL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824.6153846153845" y="122.98578199052132"/>
+            <point key="canvasLocation" x="1828" y="120"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Chat-->
+        <scene sceneID="UDL-ka-oB8">
+            <objects>
+                <navigationController title="Chat" id="3a6-0Q-5aT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chats" image="bubble.left.and.bubble.right" catalog="system" id="WyO-d2-B01">
+                        <color key="badgeColor" red="1" green="0.90754996730000004" blue="0.99431421890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="10C-ZC-aHG">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UK8-3t-SmQ" kind="relationship" relationship="rootViewController" id="2wa-Bp-ZH6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2aO-zE-Ixh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3183" y="-589"/>
+        </scene>
+        <!--Profile-->
         <scene sceneID="75V-QC-ZJC">
             <objects>
-                <viewController id="1rk-m1-Dxl" customClass="ProfileViewController" customModule="Messenger_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="1rk-m1-Dxl" customClass="ProfileViewController" customModule="Messenger_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SaV-5u-EcP">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6A-1H-NcU">
+                                <rect key="frame" x="179.33333333333334" y="404.66666666666669" width="31.333333333333343" height="34.666666666666686"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="29"/>
+                                <color key="textColor" red="0.66835051550000002" green="0.1239916962" blue="0.37964609690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kqb-La-RlQ">
+                                <rect key="frame" x="0.0" y="88" width="390" height="152"/>
+                                <color key="backgroundColor" red="1" green="0.90754996730000004" blue="0.99431421890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="czw-gQ-eWq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="esw-Cu-1JF">
+                                <rect key="frame" x="117" y="88" width="156" height="152"/>
+                                <color key="backgroundColor" red="0.90206185569999997" green="0.6775122012" blue="0.8066601497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.6855670103" green="0.12718568250000001" blue="0.38942565849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZJR-KP-6TC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.6855670103" green="0.12718568250000001" blue="0.38942565849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kqb-La-RlQ" firstAttribute="leading" secondItem="ZJR-KP-6TC" secondAttribute="leading" id="Orq-Vm-RSz"/>
+                            <constraint firstItem="Kqb-La-RlQ" firstAttribute="top" secondItem="esw-Cu-1JF" secondAttribute="top" id="Sgp-rE-gfH"/>
+                            <constraint firstItem="esw-Cu-1JF" firstAttribute="leading" secondItem="ZJR-KP-6TC" secondAttribute="leading" constant="117" id="VAT-CO-Sax"/>
+                            <constraint firstItem="Kqb-La-RlQ" firstAttribute="centerX" secondItem="esw-Cu-1JF" secondAttribute="centerX" id="X0i-bq-qfN"/>
+                            <constraint firstItem="Z6A-1H-NcU" firstAttribute="centerY" secondItem="SaV-5u-EcP" secondAttribute="centerY" id="dOL-Tt-RiX"/>
+                            <constraint firstItem="Kqb-La-RlQ" firstAttribute="bottom" secondItem="esw-Cu-1JF" secondAttribute="bottom" id="eEm-dd-lDb"/>
+                            <constraint firstItem="Kqb-La-RlQ" firstAttribute="trailing" secondItem="ZJR-KP-6TC" secondAttribute="trailing" id="iDm-Qs-xHk"/>
+                            <constraint firstItem="Kqb-La-RlQ" firstAttribute="top" secondItem="ZJR-KP-6TC" secondAttribute="top" id="jSX-Tp-mja"/>
+                            <constraint firstItem="Z6A-1H-NcU" firstAttribute="centerX" secondItem="SaV-5u-EcP" secondAttribute="centerX" id="xX3-bk-PVr"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Profile" id="E9l-M0-oLI">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" style="plain" id="jSn-aF-965">
+                            <color key="tintColor" red="0.65463917524845361" green="0.10852579762080523" blue="0.13257795322206739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="logOutBtnPress:" destination="1rk-m1-Dxl" id="Dod-Jm-H0W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTxt" destination="Z6A-1H-NcU" id="hve-Tx-kqw"/>
+                        <outlet property="profilPic" destination="esw-Cu-1JF" id="j5f-Il-3aY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSC-vD-5nV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2607.6923076923076" y="115.87677725118483"/>
+            <point key="canvasLocation" x="4560" y="141.46919431279619"/>
         </scene>
-        <!--Conversation View Controller-->
+        <!--Profile-->
+        <scene sceneID="U54-K2-J1x">
+            <objects>
+                <navigationController title="Profile" id="u1q-Cd-oeO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="phC-Jd-bKM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ja7-SG-PsY">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.90206185569999997" green="0.6775122012" blue="0.8066601497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" red="1" green="0.75107066870000005" blue="0.89424039460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1rk-m1-Dxl" kind="relationship" relationship="rootViewController" id="JYm-Fp-TBK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="new-CW-3tX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4560" y="-562"/>
+        </scene>
+        <!--Indix Tab BarC-->
+        <scene sceneID="fmZ-0W-aaX">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBaeController" id="1u7-j6-v34" customClass="IndixTabBarC" customModule="Messenger_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m85-b7-BMG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.89000000000000001" green="0.43074603849999998" blue="0.63408112169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.6855670103" green="0.12718568250000001" blue="0.38942565849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3a6-0Q-5aT" kind="relationship" relationship="viewControllers" id="1hP-U1-1Ww"/>
+                        <segue destination="u1q-Cd-oeO" kind="relationship" relationship="viewControllers" id="qdU-FC-Ozk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8E-ss-VFw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3837" y="-1280"/>
+        </scene>
+        <!--Chat-->
         <scene sceneID="AIj-of-Wsc">
             <objects>
-                <viewController id="UK8-3t-SmQ" customClass="ConversationViewController" customModule="Messenger_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConversationViewController" id="UK8-3t-SmQ" customClass="ConversationViewController" customModule="Messenger_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S7h-Hi-ORb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="kNP-Dk-2wl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Chat" id="yK4-MU-s5f">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="knh-J8-nk2">
+                            <connections>
+                                <action selector="startNewCovBtn:" destination="UK8-3t-SmQ" id="Hws-I2-ZPJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nk9-Pd-quV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3229.2307692307691" y="106.63507109004739"/>
+            <point key="canvasLocation" x="3182" y="107"/>
         </scene>
-        <!--New Conversation View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="IdC-ho-nHz">
             <objects>
-                <viewController id="H98-tJ-XUV" customClass="NewConversationViewController" customModule="Messenger_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="H98-tJ-XUV" customClass="ChatViewController" customModule="Messenger_Application" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cu3-i0-UU1">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="oNb-Ug-5PR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hg4-Vt-O0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3893.8461538461538" y="154.97630331753552"/>
+            <point key="canvasLocation" x="2010.7692307692307" y="-622.03791469194312"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y96-Wf-Aw1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqC-e9-mbH" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="gqC-e9-mbH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="emE-p0-DV8">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -303,8 +423,10 @@
     </scenes>
     <resources>
         <image name="Facebook-f_Logo" width="20" height="20"/>
+        <image name="bubble.left.and.bubble.right" catalog="system" width="128" height="96"/>
         <image name="message" catalog="system" width="128" height="113"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

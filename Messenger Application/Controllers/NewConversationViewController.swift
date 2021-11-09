@@ -22,7 +22,7 @@ class NewConversationViewController: UIViewController {
     }()
     private let tableview: UITableView = {
         let table = UITableView()
-        table.isHidden = true
+        table.isHidden = false
         table.register(UITableViewCell.self, forCellReuseIdentifier: "mycell")
         return table
     }()
@@ -39,7 +39,11 @@ class NewConversationViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(noResult)
         view.addSubview(tableview)
-
+        tableview.translatesAutoresizingMaskIntoConstraints = false
+        tableview.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableview.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableview.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableview.delegate = self
         tableview.dataSource = self
         
@@ -55,10 +59,10 @@ class NewConversationViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableview.frame = view.bounds
-        noResult.frame = CGRect(x: view.intrinsicContentSize.width/4,
-                                      y: (view.intrinsicContentSize.height-200)/2,
-                                      width: view.intrinsicContentSize.width/2,
-                                      height: 200)
+//        noResult.frame = CGRect(x: view.intrinsicContentSize.width/4,
+//                                      y: (view.intrinsicContentSize.height-200)/2,
+//                                      width: view.intrinsicContentSize.width/2,
+//                                      height: 200)
     }
  @objc private func dismissSelf() {
         dismiss(animated: true, completion: nil)
@@ -97,14 +101,23 @@ extension NewConversationViewController: UITableViewDelegate, UITableViewDataSou
 }
 
 extension NewConversationViewController: UISearchBarDelegate{
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let txt = searchBar.text, !txt.replacingOccurrences(of: " ", with: "").isEmpty else {
-                return
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        searchUsers(query: searchBar.text!)
+        
+    }
+    
+    
+
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text,!text.replacingOccurrences(of: "", with: "").isEmpty else{
+            return
         }
         searchBar.resignFirstResponder()
         results.removeAll()
         spinner.show(in: view)
-        self.searchUsers(query: txt)
+        self.searchUsers(query: text)
+        
     }
     func searchUsers(query: String){
         if hasFetched{

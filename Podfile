@@ -12,4 +12,9 @@ target 'Messenger Application' do
   pod 'MaterialComponents/TextControls+FilledTextFields'
   pod 'MaterialComponents/TextControls+OutlinedTextAreas'
   pod 'MaterialComponents/TextControls+OutlinedTextFields'
+  # message kit
+ # pod 'MessageKit'
+ #pod 'JGProgressHUD' # spinner overlay (heads up display)
+# pod 'RealmSwift' # similar to coredata (save to device) optimize
+# pod 'SDWebImage' # Image load capability (caching)
 end
